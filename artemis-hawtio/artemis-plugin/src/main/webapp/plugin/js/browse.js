@@ -117,7 +117,7 @@ var ARTEMIS = (function(ARTEMIS) {
           if (mbean && selection) {
              var selectedItems = $scope.gridOptions.selectedItems;
              $scope.message = "Moved " + Core.maybePlural(selectedItems.length, "message" + " to " + $scope.queueName);
-             var operation = "moveMessageTo(java.lang.String, java.lang.String)";
+             var operation = "moveMessage(long, java.lang.String)";
              angular.forEach(selectedItems, function (item, idx) {
                 var id = item.messageID;
                 if (id) {
